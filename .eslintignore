@@ -1,0 +1,8 @@
+# config
+next.config.js
+tailwind.config.js
+tsconfig.json
+
+# build dir
+.next/
+.node_modules/
