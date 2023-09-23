@@ -1,4 +1,7 @@
 import { Metadata } from 'next';
+
+import { Navbar } from '@/app/Navbar';
+
 import './output.css';
 
 export const metadata: Metadata = {
@@ -11,7 +14,10 @@ export const metadata: Metadata = {
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main className="p-5">{children}</main>
+      </body>
     </html>
   );
 };
