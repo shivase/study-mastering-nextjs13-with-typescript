@@ -8,10 +8,6 @@ module.exports = {
   swcMinify: true,
   experimental: {
     appDir: true,
-    typedRoutes: true,
-  },
-  webpack: (config, options) => {
-    config.resolve.alias['@'] = path.join(__dirname, 'src');
-    return config;
+    typedRoutes: false,
   },
 };

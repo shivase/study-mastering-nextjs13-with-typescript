@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "concurrently \"next dev --turbo\" \"tailwindcss -i src/app/globals.css -o src/app/output.css -w\"",
+    "build": "tailwindcss -m -i src/app/globals.css -o src/app/output.css && next build",
     "start": "next start",
     "lint": "next lint",
     "clean": "rimraf node_modules .next",
@@ -45,6 +45,7 @@
     "@typescript-eslint/parser": "^6.7.0",
     "autoprefixer": "^10.4.15",
     "commitizen": "^4.3.0",
+    "concurrently": "^8.2.1",
     "cz-customizable": "^7.0.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
