@@ -33,3 +33,5 @@ yarn-error.log*
 
 # css file
 /src/app/output.css
+
+.react-email/
